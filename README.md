@@ -1,5 +1,5 @@
 # MacOS GPG Setting
-為 Commit 添加數位簽章
+在 MacOs 上為 git commit 紀錄添加 gpg 簽章
 
 ### Step 1 安裝軟體
 ```sh
