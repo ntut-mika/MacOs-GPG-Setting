@@ -55,12 +55,12 @@ uid         [ultimate] ntut-mika <t107590003@ntut.org.tw>
 ```
 
 
-## Step 12: 輸出公鑰並貼到 github 上
+## Step 11: 輸出公鑰並貼到 github 上
 ```sh
 gpg -armor --export ########
 ```
 
-## Step 13: 設定 git
+## Step 12: 設定 git
 ```sh
 git config --global gpg.program $(which gpg)
 git config --global user.signingkey ########
