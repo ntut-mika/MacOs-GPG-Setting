@@ -9,7 +9,7 @@ brew install gpg2 gnupg pinentry-mac
 ### Step 2 創建目錄
 ```sh
 mkdir ~/.gnupg
-pinentry-mac" > ~/.gnupg/gpg-agent.conf
+echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" > ~/.gnupg/gpg-agent.conf
 ```
 
 ### Step 3: 更新或創建 ~/.gnupg/gpg.conf
@@ -41,7 +41,12 @@ gpg --full-gen-key
 1. 選擇 RSA (sign only)
 2. 輸入 4096
 3. 輸入 0
-4. name 和 email 輸入跟 github 一樣
+4. 輸入 y 確認
+5. 真實姓名輸入你 github 名稱
+6. 電子郵件地址輸入你 github 信箱
+7. 註釋不用填直接 enter
+8. 輸入 O 確認
+9. 密碼可以不用填
     
 ## Step 10: 取得 key id
 ```sh
@@ -65,5 +70,5 @@ gpg -armor --export ########
 git config --global gpg.program $(which gpg)
 git config --global user.signingkey ########
 git config --global commit.gpgsign true
-git config --global commit.gpgsign true
+git config --global tag.gpgSign true
 ```
