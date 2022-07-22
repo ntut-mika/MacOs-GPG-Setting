@@ -3,7 +3,7 @@
 
 ### Step 1 安裝軟體
 ```sh
-brew install gpg2 gnupg pinentry-mac 
+brew install gnupg pinentry-mac 
 ```
 
 ### Step 2 創建目錄
